@@ -1,0 +1,2504 @@
+
+
+
+=mediaqueryTablet
+  @media screen and (max-width: 768px)
+    @content
+
+=mediaqueryPc
+  @media screen and (min-width: 769px)
+    @content
+
+
+$main-green: #06C755
+$sub-green: #07B03B
+$white: #fff
+
+.sectionTitle 
+  width: fit-content
+  margin: 20px auto
+  h2 
+    color: $sub-green
+    font: normal normal bold 45px/68px Meiryo
+
+    +mediaqueryTablet
+      font: normal normal bold 25px/38px Meiryo
+
+
+
+.wrapper
+  width: 100%
+  max-width: 920px
+  margin: 0 auto
+
+
+html
+  margin-top: 0 !important
+
+.allwrapper
+  overflow-x: hidden
+
+header
+  +mediaqueryTablet
+    padding-left: 20px
+    padding-right: 20px
+  .headerWrap
+    width: 100%
+    height: 70px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .headerLogo
+      img
+        width: 150px
+        height: auto
+        // margin-bottom: 10px
+      p
+        font: normal normal nomal 11px/15px Meiryo
+        font-size: 10px
+        +mediaqueryTablet
+          font: normal normal normal 11px/15px Meiryo
+
+
+
+    .headerInfos
+      display: flex
+      +mediaqueryTablet
+        display: none
+      .headerInfo
+        display: flex
+        flex-direction: column
+        padding: 0 20px
+        justify-content: center
+        height: 70px
+        font: normal normal bold 24px/36px Meiryo
+        letter-spacing: 0px
+        color: $sub-green
+        p
+          font: normal normal bold 12px/15px Meiryo
+          letter-spacing: 0.24px
+        p:first-child
+          font-size: 25px
+          margin-bottom: 10px
+        p:last-child
+          font-size: 12px
+          color: #5E5E5E
+
+      .headerMenus
+        display: flex
+        a
+          // padding: 10px
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 12px
+          width: 100px
+          font: normal normal bold 12px/18px Meiryo
+          letter-spacing: 0.36px
+          color: $white
+          // transition: .5s
+          &:hover
+            opacity: 0.5
+        a:first-child
+          background: #A13D41
+        a:nth-child(2)
+          background: #FF0055
+        a:last-child
+          background: $sub-green
+
+    .headerHumbergerMenuWrap
+      display: none
+      cursor: pointer
+      +mediaqueryTablet
+        display: block
+      .headerHumbergerMenus
+        display: block
+        .headerHumbergerMenu
+          width: 30px
+          height: 5px
+          color: red
+          background: $sub-green 0% 0% no-repeat padding-box
+          border-radius: 10px
+          margin-bottom: 5px
+
+.headerSpMenu
+  display: none
+  width: 100%
+  position: absolute
+  // top: 115px
+  top: 70px
+  left: 0
+  +mediaqueryTablet
+    &.headerSpMenuOpen
+      display: block
+  .headerSpMenuWrap
+    background:#D2F9D5
+    padding: 50px
+    a
+      display: block
+      text-align: center
+      font: normal normal bold 18px/27px Meiryo
+      letter-spacing: 0px
+      color: #5E5E5E
+      margin-bottom: 20px
+      cursor: pointer
+
+      &:hover
+        opacity: 0.5
+
+      &:first-child
+        color: $sub-green
+
+      
+
+      
+footer 
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  background: #5C606D 0% 0% no-repeat padding-box
+  padding-top: 20px
+  z-index: 20
+  +mediaqueryTablet
+    padding-top: 0
+  .wrapper
+    .footerButtonsWrap 
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      +mediaqueryTablet
+        display: none
+
+      .footerButtonWrap
+        border: 2px solid $white
+        border-radius: 10px
+        width: 13%
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 10px
+        cursor: pointer
+        // transition: .5s
+        &:hover
+          opacity: 0.5
+        +mediaqueryTablet
+          display: none
+        .footerButtonWrapTitle
+          font: normal normal bold 10px/18px Meiryo
+          letter-spacing: 0.24px
+          color: $white
+        &:first-child
+          background: $white 0% 0% no-repeat padding-box
+        &:first-child .footerButtonWrapTitle 
+          color: #5E5E5E
+      .emptyFooterButton 
+        width: 13%            
+        padding: 10px
+        border: 2px solid #5C606D
+    .headerInfos
+      display: flex
+      justify-content: flex-end
+      +mediaqueryTablet
+        display: flex
+        flex-direction: column
+      .headerInfoWrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .headerInfo
+          display: flex
+          flex-direction: column
+          padding: 0 20px
+          justify-content: center
+          height: 70px
+          font: normal normal bold 24px/36px Meiryo
+          letter-spacing: 0px
+          color: $white
+          align-items: center
+
+          div
+            display: flex
+            align-items: center
+
+            img
+              width: 9%
+
+            .footerPhonenumber
+              display: block
+              color: $white !important
+              font: normal normal bold 24px/36px Meiryo
+
+          p
+            // font-size: 12px
+            color: $white
+            font: normal normal bold 13px/17px Meiryo
+
+        .headerHumbergerMenuWrap
+          display: none
+          cursor: pointer
+          margin-right: 20px
+          +mediaqueryTablet
+            display: block
+          .headerHumbergerMenus
+            display: block
+            .headerHumbergerMenu
+              width: 30px
+              height: 5px
+              color: red
+              background: $white 0% 0% no-repeat padding-box
+              border-radius: 10px
+              margin-bottom: 5px
+
+              
+    .headerMenus
+      display: flex
+      +mediaqueryTablet
+        width: 100%
+      a
+        // padding: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 12px
+        width: 100px
+        font: normal normal bold 12px/18px Meiryo
+        letter-spacing: 0.36px
+        color: $white
+        // transition: .5s
+        &:hover
+          opacity: 0.5
+        +mediaqueryTablet
+          width: 33.3%
+          padding: 10px
+          text-align: center
+      a:first-child
+        background: #FFBD00
+      a:nth-child(2)
+        background: #FF0055
+      a:last-child
+        background: $sub-green
+        
+
+  .footerSpMenu
+    display: none
+    width: 100%
+    position: absolute
+    bottom: 126px
+    left: 0
+    +mediaqueryTablet
+      &.footerSpMenuOpen
+        display: block
+    .footerSpMenuWrap
+      background:#D2F9D5
+      padding: 80px 50px 30px 50px 
+      a
+        display: block
+        text-align: center
+        font: normal normal bold 18px/27px Meiryo
+        letter-spacing: 0px
+        color: #5E5E5E
+        margin-bottom: 20px
+        cursor: pointer
+
+        &:hover
+          opacity: .5
+
+        &:first-child
+          color: $sub-green
+
+.lineworksTopwrapper
+  width: 100%
+  background: transparent linear-gradient(180deg, #91E492 0%, #47D552 100%) 0% 0% no-repeat padding-box;
+  a
+    // transition: .5s
+    &:hover
+      opacity: 0.5
+    .lineworksTopImgPc
+      width: 100%
+      max-width: 920px
+      margin: 0 auto
+      display: block
+    .lineworksTopImgsp
+      display: none
+
+
+    +mediaqueryTablet
+      .lineworksTopImgPc
+        display: none
+      .lineworksTopImgsp
+        display: block
+        width: 100%
+
+.lineworksWrap
+  padding: 80px 0
+  +mediaqueryTablet
+    width: 90%
+    margin: 0 auto
+    padding: 40px 0
+
+  .aboutLineworks
+    background: #F1F1F1
+    padding: 30px
+    border-radius: 30px
+    .aboutLineworksTitle
+      width: fit-content
+      margin: 0 auto
+      color: $sub-green
+      font: normal normal bold 45px/68px Meiryo
+      letter-spacing: 2.25px
+    .aboutLineworksText
+      border-radius: 30px
+      font: normal normal bold 18px/28px Meiryo
+      letter-spacing: 0px
+      color: #5E5E5E
+      text-align: center
+      +mediaqueryTablet
+        font: normal normal bold 15px/20px Meiryo
+      .spOnlyspan
+        display: none
+        +mediaqueryTablet
+          display: block
+  .lineworksReasons
+    margin-top: 80px
+    +mediaqueryTablet
+      margin-top: 40px
+
+    .lineworksReasonsTitle
+      font: normal normal bold 45px/68px Meiryo
+      letter-spacing: 2.25px
+      color: $white
+      background: $sub-green 0% 0% no-repeat padding-box
+      border-radius: 100px
+      width: fit-content
+      padding: 23px 54px 19px 54px
+      margin: 0 auto
+      +mediaqueryTablet
+        font: normal normal bold 20px/20px Meiryo
+        text-align: center
+        
+      .spOnlyspan
+        display: none
+        +mediaqueryTablet
+          display: block
+
+.lineworksReasonWrap 
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  +mediaqueryTablet
+    margin-top: 20px
+  .lineworksReason
+    width: 22%
+    padding: 50px 0
+    +mediaqueryTablet
+      width: 48%
+      padding: 10px 0
+    img
+      width: 100%
+      height: auto
+    h3
+      font: normal normal bold 22px/22px Meiryo
+      letter-spacing: 0px
+      color: $sub-green
+      text-align: center
+      padding: 10px 5px
+      +mediaqueryTablet
+        font: normal normal bold 12px/13px Meiryo
+    h4
+      font: normal normal bold 14px/21px Meiryo
+      letter-spacing: 0px
+      width: fit-content
+      padding: 10px 20px
+      +mediaqueryTablet
+        font: normal normal bold 10px/15px Meiryo
+
+
+.applicationWrap
+  background: #D2F9D5
+  padding-top: 50px
+  padding-bottom: 50px
+  .wrapper
+    width: 90%
+    margin: 0 auto
+    position: relative
+    
+    +mediaqueryTablet
+      display: flex
+      flex-direction: row-reverse
+      // justify-content: space-between
+      justify-content: space-evenly
+
+
+    .applicationsCircles 
+      display: flex
+      justify-content: space-between
+      position: relative
+
+      +mediaqueryTablet
+        display: flex
+        flex-direction: column
+        height: 500px
+
+
+      .border
+        width: 90%
+        height: 2px
+        border-bottom: solid 2px $main-green
+        position: absolute
+        top: 33%
+        left: 0
+        +mediaqueryTablet
+          width: 2px
+          height: 90%
+          border-left: solid 2px $main-green
+          position: absolute
+          top: 0
+          left: 21%
+
+
+      .applications 
+        width: 23%
+        +mediaqueryTablet
+          display: flex
+          width: 100%
+          
+        &:last-child .applicationsCircleWrap
+          background: $main-green
+          .applicationNumnber
+            color: $white
+          .applicationTitle
+            color: $white
+            
+
+        .applicationsCircleWrap
+          height: 180px
+          width: 180px
+          border-radius: 50%
+          background: $white
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          position: relative
+          +mediaqueryTablet
+            width: 110px
+            height: 110px
+
+          .applicationNumnber
+            font: normal normal bold 32px/48px Meiryo
+            letter-spacing: 0px
+            color: $sub-green
+
+            +mediaqueryTablet
+              display: none
+            
+          .applicationTitle
+            font: normal normal bold 20px/36px Meiryo
+            letter-spacing: 0px
+            color: #5E5E5E
+            text-align: center
+            display: flex
+            flex-direction: column
+
+            +mediaqueryTablet
+             font: normal normal bold 13px/26px Meiryo
+            span
+              font: normal normal bold 12px/26px Meiryo
+              letter-spacing: 0px
+              color: $white
+        .applicationText
+          font: normal normal normal 14px/27px Meiryo
+          letter-spacing: 0px
+          color: #5E5E5E
+          text-align: center
+          margin-top: 10px
+          +mediaqueryTablet
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-left: 10px
+            font: normal normal normal 10px/17px Meiryo
+
+  .applicationBottom 
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    +mediaqueryTablet
+      display: flex
+      flex-direction: column
+      margin-top: 0
+      // width: 30%
+
+    .nocompensation 
+      border: 3px dashed #B9B9B9
+      display: flex
+      width: 75%
+      height: 83px
+      justify-content: center
+      align-items: center
+      font: normal normal bold 32px/42px Meiryo
+      letter-spacing: 0px
+      color: #8B8B8B
+      border-radius: 20px
+
+      +mediaqueryTablet
+        writing-mode: vertical-rl
+        height: 370px
+        width: fit-content
+        padding: 0 10px
+        margin-bottom: 20px
+        font: normal normal bold 22px/32px Meiryo
+
+    .compensation 
+      background: $main-green 0% 0% no-repeat padding-box
+      border-radius: 20px
+      display: flex
+      width: 23%
+      height: 83px
+      justify-content: center
+      align-items: center
+      font: normal normal bold 32px/42px Meiryo
+      letter-spacing: 0px
+      color: $white
+      +mediaqueryTablet
+        writing-mode: vertical-rl
+        height: 100px
+        width: fit-content
+        padding: 0 10px
+        border: 3px solid $main-green
+        font: normal normal bold 22px/32px Meiryo
+
+.introductionWrap 
+  background: #F1F1F1 0% 0% no-repeat padding-box
+  padding: 50px 0
+  +mediaqueryTablet
+    padding: 20px 0
+  .wrapper
+    +mediaqueryTablet
+      width: 90%
+      margin: 0 auto
+
+    .sectionTitle 
+      width: fit-content
+      margin: 20px auto
+      p 
+        color: $sub-green
+        font: normal normal bold 45px/68px Meiryo
+
+        +mediaqueryTablet
+          font: normal normal bold 22px/36px Meiryo
+
+
+    .sectionSubTitle 
+      font: normal normal bold 24px/36px Meiryo
+      letter-spacing: 1.2px
+      color: $sub-green
+      text-align: center
+      padding-bottom: 30px
+
+      +mediaqueryTablet
+        font: normal normal bold 17px/22px Meiryo
+        padding-bottom: 0
+
+    .introductionLisks
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-top: 50px
+      +mediaqueryTablet
+        margin-top: 30px
+      .introductionLisk
+        flex-direction: column
+        width: 48%
+        +mediaqueryTablet
+          width: 100%
+        img
+          width: 100%
+        .introductionLiskpconly
+          +mediaqueryTablet
+            display: none
+        .introductionLisksponly
+          margin-bottom: 20px
+          +mediaqueryPc
+            display: none
+    .introductionImg
+      width: 100%
+      height: auto
+
+    .sectionTitle
+      .introductionMessage
+        +mediaqueryTablet  
+          font: normal normal bold 18px/28px Meiryo
+          text-align: center
+        &::before 
+          display: block
+          content: ''
+          border-left: 15px dotted #47D552
+          height: 100px
+          width: fit-content
+          margin: 0 auto 50px auto
+          +mediaqueryTablet     
+            border-left: 7px dotted #47D552
+            height: 70px
+            margin-bottom: 20px
+        br
+          display: none
+          +mediaqueryTablet    
+            display: block
+
+
+
+.lineworksdifferenceWrap 
+  background: #D2F9D5
+  padding: 50px 0
+
+  .wrapper
+    +mediaqueryTablet    
+      width: 90%
+      margin: 0 auto
+      padding: 0
+
+
+    .sectionSubTitle 
+      color: $white
+      background: $sub-green 0% 0% no-repeat padding-box
+      border-radius: 30px 30px 0px 0px
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-bottom: 0
+      padding: 20px
+      font: normal normal bold 24px/36px Meiryo
+      +mediaqueryTablet 
+        font: normal normal bold 17px/25px Meiryo
+
+
+    .lineworksdifferenceLists 
+      background-color: $white
+      padding: 50px 0
+      border-radius: 0 0 30px 30px 
+      +mediaqueryTablet 
+        padding: 10px 0
+      .lineworksdifferenceGroup 
+        margin: 0 auto
+        text-align: center
+        .wrapper
+          background-color: $white
+          padding: 30px 0
+          +mediaqueryTablet 
+            padding: 0
+            margin-bottom: 30px
+          .lineworksdifferenceGroupTitle
+            letter-spacing: NaNpx
+            color: #5E5E5E
+            font: normal normal bold 24px/34px Meiryo
+            +mediaqueryTablet 
+              font: normal normal bold 15px/25px Meiryo
+
+          .lineworksdifferenceGroupText, 
+          .lineworksdifferenceGroupText2
+            font: normal normal normal 18px/28px Meiryo
+            letter-spacing: 0px
+            color: #5E5E5E
+            background: #E4E4E4 0% 0% no-repeat padding-box
+            border-radius: 50px
+            width: 100%
+            max-width: 700px
+            margin: 0 auto
+            padding: 10px 20px
+            +mediaqueryTablet    
+              font: normal normal normal 12px/16px Meiryo
+              padding: 10px
+              width: 90%
+              margin: 0 auto
+            br
+              display: none
+              +mediaqueryTablet    
+                display: block
+                font: normal normal bold 18px/16px Meiryo
+
+          .lineworksdifferenceGroupText
+            margin-top: 20px
+          .lineworksdifferenceGroupText2
+            margin-top: 10px
+
+          img
+            +mediaqueryTablet    
+              width: 100%
+
+      .lineworksdifferenceWrapBottomMessage 
+        margin: 50px auto
+        width: 220px
+        height: 220px
+        border: 24px solid #D1F3D4
+        border-radius: 50%
+        background-color: $white
+        display: flex
+        align-items: center
+        justify-content: center
+        white-space: nowrap
+        +mediaqueryTablet   
+          width: 200px
+          height: 200px
+          margin: 20px auto
+
+        h3 
+          font: normal normal bold 30px/38px Meiryo
+          letter-spacing: 0px
+          color: $sub-green
+          text-align: center
+          +mediaqueryTablet   
+           font: normal normal bold 20px/28px Meiryo
+
+
+.featureWrap
+  .wrapper
+    width: 100%
+    max-width: 920px
+    margin: 0 auto
+    +mediaqueryTablet  
+      width: 90%
+      position: relative
+      &.featureWrapWrapperToggle
+        width: 100%
+
+    .featureItemWrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-start
+        +mediaqueryTablet  
+          padding: 0
+
+        .featureItems
+          position: relative
+          border: 1px solid $main-green
+          border-radius: 12px 
+          width: 30%
+          margin-bottom: 20px
+          text-align: center
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: column
+          &.featureItemsBgToggle
+            background: $main-green
+            height: 350px
+
+          &::before
+            content: ''
+            display: block
+            padding-top: 75%
+
+          +mediaqueryTablet  
+            &.featureItemsBgToggle
+              width: 100%
+            &.featureItemsDisplayToggle
+              display: none
+
+          .featureItemContainer
+            position: absolute
+            left: 0
+            bottom: 0
+            right: 0
+            top: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            &.featureItemContainerToggle
+              justify-content: flex-start
+              +mediaqueryTablet  
+                justify-content: center
+
+            .questionOpenButtonWrap
+              position: absolute
+              right: 10px
+              top: 10px
+              width: 30px
+              height: 30px
+              border-radius: 50%
+              border: 1px solid $sub-green
+              background: $sub-green
+              display: flex
+              align-items: center
+              justify-content: center
+              +mediaqueryTablet  
+                width: 20px
+                height: 20px
+                right: 5px
+                top: 5px
+              &.questionOpenButtonWrapToggle
+                border: 1px solid $sub-green
+                background: $sub-green
+              .questionOpenButton
+                width: 10px
+                border: 1px solid $white
+                position: absolute
+                &.questionOpenButtonToggle
+                  border: 1px solid $white
+
+              .questionOpenButton2
+                width: 10px
+                border: 1px solid $white
+                transform: rotate(90deg)
+                position: absolute
+                transition: .3s
+                &.questionOpenButtonToggle2
+                  border: 1px solid $white
+                  transform: rotate(0)
+            img
+              width: 20%
+              &.imgToggle
+                display: none
+            > p
+              font: normal normal bold 24px/36px Meiryo
+              color: #5E5E5E
+              &.featureItemPToggle
+                color: $white
+                margin-top: 20px
+                +mediaqueryTablet   
+                  font: normal normal bold 20px/26px Meiryo
+                  margin-bottom: 10px
+              +mediaqueryTablet   
+                font: normal normal bold 12px/26px Meiryo
+
+
+            .featureItemToggleWrap
+              display: none
+              
+              &.featureItemToggleWrapOpen
+                display: block
+                color: $white
+              p
+                color: $white
+                display: flex
+                justify-content: flex-start
+                font: normal normal bold 18px/30px Meiryo
+                +mediaqueryTablet  
+                  font: normal normal bold 15px/20px Meiryo
+        
+.priceListWrap 
+  background: #D2F9D5 0% 0% no-repeat padding-box
+  padding-bottom: 50px
+  padding-top: 50px
+  +mediaqueryTablet  
+    padding-top: 0
+  .wrapper
+    +mediaqueryTablet  
+      scrollbar-width: none
+      -ms-overflow-style: none 
+
+      &::-webkit-scrollbar 
+        display: none
+
+      overflow-x: scroll
+      
+    table, td, th
+      border: 2px solid #D2F9D5
+
+    .priceLists
+      +mediaqueryTablet  
+        overflow-x: scroll
+        width: 150%
+        margin-left: 5%
+
+      thead
+        th
+          padding-top: 20px
+          padding-bottom: 20px
+        th:nth-of-type(1)
+          background: $white 0% 0% no-repeat padding-box
+          border-radius: 20px 20px 0px 0px
+
+
+        th:nth-of-type(2)
+          background: #B1B1B1 0% 0% no-repeat padding-box  
+          border-radius: 20px 20px 0px 0px
+
+        th:nth-of-type(3)
+          background: $main-green 0% 0% no-repeat padding-box
+          border-radius: 20px 20px 0px 0px
+
+        th:nth-of-type(4)
+          background: #3FF351 0% 0% no-repeat padding-box
+          border-radius: 20px 20px 0px 0px
+
+        tr
+          th 
+            font: normal normal bold 24px/24px Meiryo
+            letter-spacing: 0px
+            color: #5E5E5E
+            display: flex
+            justify-content: center
+            align-items: center
+            +mediaqueryTablet  
+              font: normal normal bold 12px/12px Meiryo;
+
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2),
+            &:nth-last-of-type(3),
+              color: $white
+              
+          
+          .recommendation
+            position: relative
+            
+            &::before
+              font-size: 10px
+              color: $white
+              content: 'オススメ'
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 55px 
+              height: 55px
+              border-radius: 50%
+              background: #FF0055
+              position: absolute
+              right: 0
+              top: -50%
+              +mediaqueryTablet  
+                width: 45px
+                height: 45px
+
+           
+      tbody
+        tr          
+          &:nth-of-type(2n+ 1) 
+            background: #F1F1F1 0% 0% no-repeat padding-box
+
+          &:nth-of-type(2n)
+            background: $white 0% 0% no-repeat padding-box
+
+          td 
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 10px
+            flex-direction: column
+          
+            &:nth-of-type(3)
+              border-left: 4px solid $main-green
+              border-right: 4px solid $main-green
+
+            .tableBoldfont
+              font: normal normal bold 18px/24px Meiryo
+              letter-spacing: 0px
+              color: #5E5E5E
+              +mediaqueryTablet   
+                font: normal normal bold 10px/11px Meiryo
+                margin-bottom: 5px
+
+            p
+              letter-spacing: 0px
+              color: #5E5E5E
+              font: normal normal normal 11px/24px Meiryo
+              +mediaqueryTablet   
+                font: normal normal normal 9px/13px Meiryo
+
+          .greenBorderTop
+            border-top: 4px solid $main-green
+
+          .greenBorderBottom
+            border-bottom: 4px solid $main-green
+          
+
+      td , tr ,th 
+        display: flex
+        flex-basis: 25%
+      
+
+      
+    .priceListButtonWrap 
+      display: flex
+      justify-content: space-between
+      +mediaqueryTablet    
+        width: 90%
+        margin: 0 auto
+
+      .priceListButton 
+        border-radius: 100px
+        width: 26%
+        padding: 25px
+        display: flex
+        justify-content: center
+        align-items: center
+        font: normal normal bold 18px/15px Meiryo
+        letter-spacing: 0.36px
+        color: $white
+        cursor: pointer
+        // transition: .5s
+        &:hover
+          opacity: 0.5
+        +mediaqueryTablet    
+          padding: 5px 10px
+        p
+          +mediaqueryTablet   
+            font: normal normal bold 14px/18px Meiryo
+            letter-spacing: 0.28px
+            color: $white
+          br
+            display: none
+            +mediaqueryTablet    
+              display: block
+              font: normal normal bold 18px/10px Meiryo
+
+        &:nth-child(1)
+          background: transparent linear-gradient(180deg, #FFD45A 0%, #FFA000 100%) 0% 0% no-repeat padding-box
+          border-radius: 100px
+        &:nth-child(2)
+          background: transparent linear-gradient(180deg, #FF689A 0%, #FF0055 100%) 0% 0% no-repeat padding-box        
+          border-radius: 100px
+        &:nth-child(3)
+          background: transparent linear-gradient(180deg, #40EA75 0%, $sub-green 100%) 0% 0% no-repeat padding-box
+          border-radius: 100px
+
+    .sectionTitle
+      // width: fit-content
+      width: 90%
+      margin: 20px auto
+      text-align: center
+      h2 
+        color: $sub-green
+        font: normal normal bold 35px/68px Meiryo
+
+        +mediaqueryTablet
+          font: normal normal bold 20px/38px Meiryo
+      
+.featureWrap2
+  width: 100%
+  max-width: 920px
+  margin: 0 auto
+  +mediaqueryTablet  
+    width: 100%
+    margin: 0 auto
+  #option
+    // +mediaqueryTablet 
+    //   margin-bottom: 0
+
+  .effectinterviewWraps
+    width: 100%
+    display: flex
+    flex-direction: column
+    +mediaqueryTablet 
+      width: 90%
+      margin: 0 auto
+    .effectinterviewWrap
+      &:nth-child(2)
+        .effectinterview
+          .effectinterviewImageR
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 200px
+            +mediaqueryTablet    
+              width: 100px
+          .effectinterviewText
+            margin-right: 100px
+            letter-spacing: 0px
+            color: #5E5E5E
+            font: normal normal normal 24px/34px Meiryo
+            display: flex
+            align-items: center
+            width: 90%
+            z-index: -1
+            margin-left: auto
+            padding: 30px 150px
+            background: #F1F1F1 0% 0% no-repeat padding-box
+            border-radius: 30px
+            height: 150px
+            +mediaqueryTablet    
+              padding: 10px 50px
+              font: normal normal normal 10px/20px Meiryo
+              letter-spacing: 0.5px           
+              height: 100px
+              margin-right: 50px
+        
+      .effectinterview
+        position: relative
+        display: flex
+        background-size: contain
+        margin-bottom: 50px
+        .effectinterviewImage
+          width: 200px
+          position: absolute
+          left: 0
+          bottom: 0
+          +mediaqueryTablet 
+            width: 100px
+        .effectinterviewText
+          letter-spacing: 0px
+          color: #5E5E5E
+          font: normal normal normal 24px/34px Meiryo
+          display: flex
+          align-items: center
+          width: 90%
+          z-index: -1
+          margin-left: auto
+          padding: 30px 150px
+          background: #F1F1F1 0% 0% no-repeat padding-box
+          border-radius: 30px
+          margin-left: 100px
+          height: 150px
+          +mediaqueryTablet    
+            padding: 10px 50px
+            font: normal normal normal 10px/20px Meiryo
+            letter-spacing: 0.5px           
+            height: 100px
+            margin-left: 50px
+
+  .optionWrapper
+    +mediaqueryTablet    
+      width: 90%
+      margin: 0 auto
+    &.optionWrapperToggle
+      width: 100%
+    .optionItemWrap
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: flex-start
+      +mediaqueryTablet  
+        padding: 0
+
+      .optionItems
+        position: relative
+        border: 1px solid $main-green
+        border-radius: 12px 
+        width: 30%
+        margin-bottom: 20px
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        &.optionItemsBgToggle
+          background: $sub-green
+
+        &::before
+          content: ''
+          display: block
+          padding-top: 75%
+
+        +mediaqueryTablet  
+          &.optionItemsBgToggle
+            width: 100%
+          &.optionItemsDisplayToggle
+            display: none
+
+        .optionItemContainer
+          position: absolute
+          left: 0
+          bottom: 0
+          right: 0
+          top: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: column
+
+          &.optionItemContainerToggle
+            justify-content: flex-start
+            // +mediaqueryTablet  
+            //   justify-content: center
+
+          .questionOpenButtonWrap
+            position: absolute
+            right: 10px
+            top: 10px
+            width: 30px
+            height: 30px
+            border-radius: 50%
+            border: 1px solid $sub-green
+            border: 1px solid $white
+            background: $sub-green
+            display: flex
+            align-items: center
+            justify-content: center
+            +mediaqueryTablet  
+              width: 20px
+              height: 20px
+              right: 5px
+              top: 5px
+            &.questionOpenButtonWrapToggle
+              border: 1px solid $sub-green
+            .questionOpenButton
+              width: 10px
+              border: 1px solid $white
+              position: absolute
+              &.questionOpenButtonToggle
+                border: 1px solid $white
+
+            .questionOpenButton2
+              width: 10px
+              border: 1px solid $white
+              transform: rotate(90deg)
+              position: absolute
+              transition: .3s
+              &.questionOpenButtonToggle2
+                border: 1px solid $white
+                transform: rotate(0)
+          img
+            width: 20%
+            &.imgToggle
+              display: none
+          > p
+            font: normal normal bold 24px/36px Meiryo
+            color: #5E5E5E
+            white-space: nowrap
+            &.optionItemPToggle
+              color: $white
+              margin-top: 20px
+              font: normal normal bold 20px/36px Meiryo
+              +mediaqueryTablet   
+                font: normal normal bold 20px/26px Meiryo
+
+            +mediaqueryTablet   
+              font: normal normal bold 10px/16px Meiryo
+
+          .optionItemToggleWrap
+            display: none
+            padding: 20px
+            &.optionItemToggleWrapOpen
+              display: block
+              color: $white
+            > p
+              display: flex
+              justify-content: flex-start
+              font: normal normal bold 14px/26px Meiryo
+
+              &:nth-child(2)
+                color: yellow
+                font: normal normal bold 13px/26px Meiryo
+
+              &:last-child
+                border-top: 2px solid $white
+                padding-top: 20px
+                margin-top: 20px
+                text-align: left
+            div
+              display: flex
+              justify-content: space-between
+              margin-bottom: 10px
+              div
+                border: 2px solid $white
+                border-radius: 12px
+                width: 46%
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 10px 0
+                p
+                  font: normal normal bold 14px/26px Meiryo
+      
+      .dammyoptionItems
+        opacity: 0
+
+.featureWrap3
+  width: 100%
+  max-width: 920px
+  margin: 0 auto
+  +mediaqueryTablet  
+    width: 100%
+    margin: 0 auto
+  #option
+    +mediaqueryTablet 
+      margin-bottom: 0
+
+  .optionWrapper2
+    +mediaqueryTablet    
+      width: 90%
+      margin: 0 auto
+      &.optionWrapperToggle2
+        width: 100%
+    .optionItemWrap
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: flex-start
+      +mediaqueryTablet  
+        padding: 0
+
+      .optionItems
+        position: relative
+        border: 1px solid $main-green
+        border-radius: 12px 
+        width: 30%
+        margin-bottom: 20px
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        &.optionItemsBgToggle
+          background: $sub-green
+
+        &::before
+          content: ''
+          display: block
+          padding-top: 75%
+
+        +mediaqueryTablet  
+          &.optionItemsBgToggle
+            width: 100%
+            // height: auto
+          &.optionItemsDisplayToggle
+            display: none
+
+        .optionItemContainer
+          position: absolute
+          left: 0
+          bottom: 0
+          right: 0
+          top: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          flex-direction: column
+
+          &.optionItemContainerToggle
+            justify-content: flex-start
+            // +mediaqueryTablet  
+            //   justify-content: center
+
+          .questionOpenButtonWrap
+            position: absolute
+            right: 10px
+            top: 10px
+            width: 30px
+            height: 30px
+            border-radius: 50%
+            // border: 1px solid $sub-green
+            border: 1px solid $white
+            display: flex
+            align-items: center
+            justify-content: center
+            background: $sub-green
+            +mediaqueryTablet  
+              width: 20px
+              height: 20px
+              right: 5px
+              top: 5px
+            &.questionOpenButtonWrapToggle
+              border: 1px solid $white
+            .questionOpenButton
+              width: 10px
+              border: 1px solid $white
+              position: absolute
+              &.questionOpenButtonToggle
+                border: 1px solid $white
+
+            .questionOpenButton2
+              width: 10px
+              border: 1px solid $white
+              transform: rotate(90deg)
+              position: absolute
+              transition: .3s
+              &.questionOpenButtonToggle2
+                border: 1px solid $white
+                transform: rotate(0)
+          img
+            width: 20%
+            &.imgToggle
+              display: none
+          > p
+            font: normal normal bold 24px/36px Meiryo
+            color: #5E5E5E
+            &.optionItemPToggle
+              color: $white
+              margin-top: 20px
+              font: normal normal bold 20px/26px Meiryo
+              +mediaqueryTablet   
+                font: normal normal bold 20px/26px Meiryo
+            +mediaqueryTablet   
+              font: normal normal bold 10px/16px Meiryo
+
+
+          .optionItemToggleWrap
+            display: none
+
+            &.optionItemToggleWrapOpen
+              display: block
+              color: $white
+
+              &.optionItemToggleWrapOpen
+              display: block
+              color: $white
+
+            div
+              display: flex
+              flex-direction: column
+              width: 90%
+              margin: 0 auto
+
+              > div
+                border: 2px solid $white
+                border-radius: 12px
+                width: 100%
+                padding: 20px 0
+                margin: 20px 0
+                
+                > p
+                  font: normal normal bold 13px/26px Meiryo
+                  display: flex
+                  justify-content: center
+                  align-items: center
+                  color: $white
+                
+              p
+                color: yellow
+                font: normal normal bold 13px/26px Meiryo
+                text-align: left
+
+              &:last-child
+                display: flex
+                flex-wrap: wrap
+                flex-direction: row
+                justify-content: center
+                margin-top: 20px
+
+                div
+                  width: 48%
+                  border: none
+                  padding: 5px 0
+                  margin: 0
+                  text-align: center
+                  flex-direction: column
+
+                  p
+                    text-align: center
+                    font: normal normal bold 10px/16px Meiryo
+      
+      .dammyoptionItems
+        opacity: 0
+        height: 0!important
+
+.aboutDigicoWrap
+  padding-top: 50px
+  padding-bottom: 50px
+  +mediaqueryTablet   
+    width: 90%
+    margin: 0 auto
+    padding-top: 0
+    padding-bottom: 0
+  .sectionTitle
+    h2
+      color: #A13D41
+      +mediaqueryTablet 
+        text-align: center
+      span
+        display: none
+        +mediaqueryTablet    
+          display: block
+          font: normal normal bold 18px/10px Meiryo
+
+  .aboutDigicoWrapAgent
+    background: #A13D41 0% 0% no-repeat padding-box
+    border-radius: 60px
+    width: fit-content
+    margin: 0 auto
+    font: normal normal bold 18px/28px Meiryo
+    letter-spacing: 0px
+    color: $white
+    padding: 5px 20px
+  .aboutDigicoText
+    font: normal normal bold 18px/28px Meiryo
+    letter-spacing: 0.36px
+    color: #5E5E5E
+    width: 90%
+    margin: 0 auto
+  .aboutDigicoButtonWrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .aboutDigicoButtons
+      background: #D58588 0% 0% no-repeat padding-box
+      box-shadow: 0px 5px 0px #A13D41
+      border-radius: 60px 
+      width: 28%
+      padding: 10px 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      font: normal normal bold 18px/28px Meiryo
+      letter-spacing: 0px
+      color: $white
+      margin-bottom: 20px
+      height: 60px
+      // transition: .5s
+      &:hover
+        opacity: 0.5
+
+      +mediaqueryTablet   
+        width: 45%
+        padding: 5px 
+        height: 80px
+        box-shadow: -1.08px 3px 0px #A13D41
+        border-radius: 28px
+      
+      .aboutDigicoButtonsText
+        +mediaqueryTablet   
+          font: normal normal bold 12px/18px Meiryo
+        .aboutDigicoButtonsTextbr
+          display: none
+          +mediaqueryTablet 
+            display: block
+        span
+          display: inline-block
+          +mediaqueryTablet 
+            display: none
+
+
+.digicoSupportWrap
+  background: #F1F1F1 0% 0% no-repeat padding-box
+  padding-top: 50px
+  padding-bottom: 50px
+  +mediaqueryTablet    
+    padding-bottom: 20px
+    padding-top: 20px
+  .wrapper
+    +mediaqueryTablet    
+      width: 90%
+      margin: 0 auto
+    .sectionTitle
+      h2
+        color: #A13D41
+        text-align: center
+        span
+          display: none
+          +mediaqueryTablet    
+            display: block
+            font: normal normal bold 18px/10px Meiryo
+
+    .supportsWrap 
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .supports
+        width: 25%
+        display: flex
+        flex-direction: column
+        background: $white 0% 0% no-repeat padding-box
+        border: 2px solid #A13D41
+        border-radius: 20px
+        // justify-content: center
+        justify-content: space-between
+        align-items: center
+        padding: 30px
+        +mediaqueryTablet    
+          width: 100%
+          display: flex
+          flex-direction: column
+          margin-bottom: 20px
+          padding: 10px
+
+        .sponlySupportsTitle
+          display: none
+          +mediaqueryTablet    
+            display: block
+            // margin-top: 20px
+            margin-bottom: 20px
+            font: normal normal bold 24px/36px Meiryo
+            letter-spacing: 0px
+            color: #5E5E5E
+
+        .supportsSpWrap
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          +mediaqueryTablet    
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+          img
+            width: 50%
+            +mediaqueryTablet    
+              width: 30%
+              height: auto
+          .supportsTextWrap
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            +mediaqueryTablet   
+              width: 60%
+            .supportsTitle
+              margin-top: 20px
+              margin-bottom: 20px
+              font: normal normal bold 24px/36px Meiryo
+              letter-spacing: 0px
+              color: #5E5E5E
+              +mediaqueryTablet    
+                display: none
+            .supportsText
+              font: normal normal normal 18px/28px Meiryo
+              letter-spacing: 0.36px
+              color: #5E5E5E
+              +mediaqueryTablet    
+                font: normal normal bold 13px/28px Meiryo
+
+    .digicoSupportWrapText 
+      font: normal normal bold 24px/41px Meiryo
+      letter-spacing: 0px
+      color: #5E5E5E
+      width: 80%
+      margin: 0 auto
+      margin-top: 50px
+      text-align: center
+      +mediaqueryTablet    
+        font: normal normal bold 16px/31px Meiryo
+        margin-top: 10px
+
+.questionsWrap
+  padding-bottom: 300px
+  width: 100%
+  max-width: 920px    
+  margin: 0 auto
+  +mediaqueryTablet   
+    padding-bottom: 210px
+  .wrapper
+    +mediaqueryTablet    
+      background: #D2F9D5
+      width: 90%
+      margin: 0 auto
+      border-radius: 20px
+    .questions
+      width: 100%
+      max-width: 1054px
+      margin: 0 auto
+      padding: 10px 0
+
+      .questionWrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #D2F9D5
+        border-radius: 60px
+        padding: 10px 20px
+        position: relative
+        .question
+          display: flex
+          align-items: center
+          font: normal normal bold 18px/27px Meiryo
+          letter-spacing: 0.9px
+          color: #5E5E5E
+          width: 98%
+          +mediaqueryTablet    
+            font: normal normal bold 14px/20px Meiryo
+
+        .questionOpenButtonWrap
+          position: absolute
+          right: 10px
+          // top: 10px
+          width: 30px
+          height: 30px
+          border-radius: 50%
+          border: 1px solid $sub-green
+          background: $sub-green
+          display: flex
+          align-items: center
+          justify-content: center
+          +mediaqueryTablet  
+            width: 20px
+            height: 20px
+            right: 5px
+            top: 10px
+          &.questionOpenButtonWrapToggle
+            border: 1px solid $white
+          .questionOpenButton
+            width: 10px
+            border: 1px solid $white
+            position: absolute
+            
+          .questionOpenButton2
+            width: 10px
+            border: 1px solid $white
+            transform: rotate(90deg)
+            position: absolute
+            transition: .3s
+            &.questionOpenButtonToggle2
+              border: 1px solid $white
+              transform: rotate(0)
+              
+      .answer
+        padding: 20px 10px
+        font: normal normal bold 18px/27px Meiryo
+        letter-spacing: 0.9px
+        color: #5E5E5E
+        display: none
+        // transition: .3s
+        // padding: 0
+        // visibility: hidden
+        // opacity: 0
+        // height: 0
+        
+        +mediaqueryTablet    
+          background: $white
+          border-radius: 10px
+          width: 90%
+          margin: 0 auto
+          // padding: 20px 10px
+          color: $sub-green
+          font: normal normal bold 14px/17px Meiryo
+
+        &.answerOpen
+          display: block
+          // height: auto
+          // visibility: visible
+          // opacity: 1
+          padding: 20px 10px
+
+
+
+.contactpage,
+.applicationpage
+  padding-top: 50px
+  width: 100%
+  overflow: hidden
+  +mediaqueryTablet   
+    padding-top: 0
+  .sectionTitle
+    p
+      color: #5E5E5E
+      font: normal normal bold 45px/68px Meiryo
+
+      +mediaqueryTablet
+        font: normal normal bold 25px/38px Meiryo
+
+
+  .sectionSubTitle
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    +mediaqueryTablet  
+      width: 90%
+      margin: 0 auto 50px
+    p
+      color: #5E5E5E
+      font: normal normal bold 24px/36px Meiryo
+      letter-spacing: 1.2px
+      +mediaqueryTablet    
+        font: normal normal bold 17px/36px Meiryo
+
+        
+  .contactWrap
+    margin-bottom: 200px
+    margin-top: 100px
+    +mediaqueryTablet    
+      // width: 90%
+      width: 100%
+      margin: 0 auto
+      // padding-bottom: 100px
+    .mw_wp_form
+      width: 100%
+      max-width: 800px
+      margin: 0 auto
+      +mediaqueryTablet    
+        width: 90%
+        margin: 0 auto
+        padding-bottom: 100px
+      form
+        div
+          display: flex
+          margin-bottom: 40px
+          align-items: center
+          p:first-child
+            width: 180px
+            color: #5E5E5E
+            font: normal normal bold 18px/36px Meiryo
+            +mediaqueryTablet    
+              font: normal normal bold 15px/26px Meiryo
+            span
+              color: #B70038
+
+          p:last-child
+            width: 100%
+            input
+              padding: 10px
+              width: 100%
+              background: $white 0% 0% no-repeat padding-box
+              border: 2px solid #A4A4A4
+              border-radius: 10px
+              padding: 10px
+              +mediaqueryTablet 
+                width: 90%
+                          
+            .error
+              color: red
+              font-size: 12px
+              
+          &:nth-child(8)
+            p:last-child
+              display: flex
+              flex-direction: row
+              flex-wrap: wrap
+              +mediaqueryTablet 
+                flex-direction: column   
+              span
+                margin-bottom: 10px
+                margin-left: 0
+                label
+                  display: flex
+                  width: 200px
+                  input
+                    width: 20px
+                    height: 20px
+                    padding: 10px
+                    margin-right: 5px
+                    
+
+          &:nth-child(9)
+            p:last-child
+              select
+                background: $white 0% 0% no-repeat padding-box
+                border: 2px solid #A4A4A4
+                border-radius: 10px
+                width: 100px
+                height: 40px
+                padding: 10px
+                // input
+
+          &:nth-child(10)
+            textarea
+              background: $white 0% 0% no-repeat padding-box
+              border: 2px solid #A4A4A4
+              border-radius: 10px
+              padding: 10px
+              +mediaqueryTablet 
+                width: 90%
+                margin: 0 auto
+
+          &:nth-child(12)
+            margin-top: 40px
+            margin-bottom: 20px
+
+        .applicationpass
+          margin-bottom: 20px    
+
+        .checkWrap
+          width: fit-content
+          margin: 0 auto
+          height: 40px
+          margin-top: 30px
+          margin-bottom: 20px
+          
+          p
+            // text-decoration: underline
+            text-decoration: none
+            cursor: pointer
+            a
+              color: #A13D41
+              text-decoration: underline
+          
+          
+          .error
+            color: red
+            font-size: 12px
+              
+
+            
+        .applicationpasword
+          margin-bottom: 20px
+
+        .applicationAnnotation
+          width: fit-content
+          font: normal normal  10px/16px Meiryo
+          margin-left: 150px
+          margin-bottom: 40px
+          +mediaqueryTablet 
+            margin-left: 120px
+
+          .applicationAnnotationspan
+            text-decoration: underline
+            text-decoration-color: red
+
+        .applicationAnnotation2
+          width: 100%
+          font: normal normal  15px/30px Meiryo
+          margin-bottom: 40px
+          border: 1px solid #333
+          padding: 10px
+          +mediaqueryTablet 
+            font: normal normal  13px/25px Meiryo
+            width: 90%
+            margin: 0 auto
+            margin-bottom: 40px
+
+        .checkButton
+          // width: 200px
+          width: fit-content
+          display: block
+          margin: 0 auto
+          +mediaqueryTablet 
+            width: 200px
+          input
+            margin-top: 30px
+            background: #FF0055 0% 0% no-repeat padding-box
+            border-radius: 28px
+            justify-self: center
+            align-items: center
+            border: 1px solid #FF0055 
+            padding: 10px 40px
+            letter-spacing: 0px
+            color: $white
+            font-size: 
+            cursor: pointer
+            font: normal normal bold 20px/36px Meiryo
+            width: 100%
+            +mediaqueryTablet 
+              padding: 5px 40px
+              font: normal normal bold 14px/26px Meiryo
+              width: 100%
+              appearance: none
+              -webkit-appearance: none
+        #email,
+        #pass,
+        #ids,
+        #worksGroup,
+        #groups,
+        #lineworksdomain,
+        #domain
+          margin-bottom: 0
+        
+
+.completetpage
+  padding-top: 100px
+  .sectionTitle
+    font: normal normal bold 30px/38px Meiryo
+    letter-spacing: 1.2px
+    color: #5E5E5E
+
+  .sectionSubTitle
+    text-align: center
+    font: normal normal bold 20px/24px Meiryo
+    letter-spacing: 1.2px
+    color: #5E5E5E
+  
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #5C606D 0% 0% no-repeat padding-box
+    border-radius: 28px
+    width: 350px
+    padding: 15px 30px
+    margin: 60px auto
+    color: $white
+    font: normal normal bold 20px/24px Meiryo
+    +mediaqueryTablet 
+      font: normal normal bold 12px/20px Meiryo
+      width: 200px
+
+
+.mw_wp_form_confirm .show
+  display: none
+
+.mw_wp_form_confirm .checkWrap
+  visibility: hidden
+
+.applicationpage
+  +mediaqueryTablet  
+    width: 100%
+    overflow: hidden
+  .applicationpageTopText
+    width: 100%
+    max-width: 800px
+    margin: 50px auto
+    +mediaqueryTablet  
+      width: 90%
+      margin: 0 auto 50px
+    p
+      font: normal normal bold 15px/24px Meiryo
+      color: #5E5E5E
+      +mediaqueryTablet  
+       font: normal normal bold 13px/20px Meiryo
+
+    .applicationpageTopTextLarge
+      font: normal normal bold 20px/24px Meiryo
+      color: #5E5E5E
+      margin-bottom: 10px
+      margin-top: 20px
+      +mediaqueryTablet  
+       font: normal normal bold 17px/20px Meiryo
+
+  .contactWrap
+    margin-top: 0
+    .mw_wp_form
+      form
+        div
+          &:nth-child(2)
+            p:last-child
+              select
+                width: 200px
+                height: 40px
+                background: $white 0% 0% no-repeat padding-box
+                border: 2px solid #A4A4A4
+                border-radius: 10px
+                padding: 10px
+
+          &:nth-child(11)
+            width: 100%
+            margin: 0 auto
+            margin-bottom: 20px
+
+          p:first-child
+            font: normal normal bold 15px/24px Meiryo
+
+          &:last-child
+            // width: 200px
+            width: fit-content
+            margin: 0 auto
+            display: block
+            input
+              margin-top: 30px
+              background: #FF0055 0% 0% no-repeat padding-box
+              border-radius: 28px
+              justify-self: center
+              align-items: center
+              border: 1px solid #FF0055 
+              padding: 10px 40px
+              letter-spacing: 0px
+              color: $white
+              cursor: pointer
+              font: normal normal bold 20px/36px Meiryo
+              +mediaqueryTablet  
+                font: normal normal bold 14px/26px Meiryo
+                margin-top: 20px
+                padding: 5px 40px
+                width: 100%
+
+          &:nth-child(1)
+            margin-bottom: 20px
+
+          &:nth-child(4)
+            margin-bottom: 20px
+
+          .validationerror,
+          .validationerror2,
+          .validationerror3,
+          .validationerror4,
+          .validationerror5
+            p
+              color: red
+              margin-left: 150px
+              display: block
+              width: fit-content
+              +mediaqueryTablet  
+                font-size: 10px
+                margin-left: 120px
+        
+
+        .checkWrap
+          width: fit-content
+          margin: 0 auto
+          height: 40px
+          margin-top: 30px
+          margin-bottom: 20px
+          span
+            margin-right: 3px
+          
+          p
+            text-decoration: none
+            // text-decoration: underline
+            cursor: pointer
+            a
+              color: #A13D41
+              text-decoration: underline
+
+
+        #domain
+          display: none
+          &.domainWishOpen
+            display: flex
+            // margin-left: 30px
+
+        #lineworksdomain
+          display: none
+          &.lineworksdomainWishOpen
+            display: flex
+            // margin-left: 30px
+
+        #advanceSelectOnly
+          display: none
+
+          &.advanceSelectOnlyOpen
+            display: block
+            border-bottom: 1px solid #333
+            font-size: 12px
+            margin-bottom: 10px
+            // margin-left: 30px
+            width: fit-content
+
+        #annotationadvanceSelectOnly
+          display: none
+          &.annotationadvanceSelectOnlyOpen
+            display: block
+            // margin-left: 30px
+            color: red
+            font-size: 12px
+            margin-bottom: 10px
+
+        #worksGroup
+          &.worksGroupClose
+            display: none
+
+        .applicationAnnotationworksGroup1,
+        .applicationAnnotationworksGroup2,
+        .applicationAnnotationworksGroup3
+          &.applicationAnnotationClose
+            display: none
+        
+        .applicationPassword
+          margin-bottom: 20px
+
+.mw_wp_form_confirm 
+  div:nth-child(1)
+    margin-bottom: 20px
+
+  div:nth-child(4)
+    margin-bottom: 20px
+
+  div:last-child
+    width: 200px
+    margin: 0 auto
+    input
+      margin-top: 30px
+      background: #FF0055 0% 0% no-repeat padding-box
+      border-radius: 28px
+      justify-self: center
+      align-items: center
+      border: 1px solid #FF0055 
+      padding: 10px 40px
+      letter-spacing: 0px
+      color: $white
+      font-size: 
+      cursor: pointer
+      font: normal normal bold 20px/36px Meiryo
+
+
+.documentrequestpage
+  padding-top: 50px
+  width: 100%
+  overflow: hidden
+  +mediaqueryTablet   
+    padding-top: 0
+  .sectionTitle
+    p
+      color: #5E5E5E
+      font: normal normal bold 45px/68px Meiryo
+      +mediaqueryTablet
+        font: normal normal bold 25px/38px Meiryo
+
+  .sectionSubTitle
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    +mediaqueryTablet  
+      width: 90%
+      margin: 0 auto 50px
+    p
+      color: #5E5E5E
+      font: normal normal bold 24px/36px Meiryo
+      letter-spacing: 1.2px
+      +mediaqueryTablet    
+        font: normal normal bold 17px/36px Meiryo
+  .contactWrap
+    margin-bottom: 200px
+    margin-top: 100px
+    +mediaqueryTablet    
+      // width: 90%
+      width: 100%
+      margin: 0 auto
+      // padding-bottom: 100px
+    .mw_wp_form
+      width: 100%
+      max-width: 800px
+      margin: 0 auto
+      +mediaqueryTablet    
+        width: 90%
+        margin: 0 auto
+        padding-bottom: 100px
+      form
+        div
+          display: flex
+          margin-bottom: 40px
+          align-items: center
+          p:first-child
+            width: 180px
+            color: #5E5E5E
+            font: normal normal bold 18px/36px Meiryo
+            +mediaqueryTablet    
+              font: normal normal bold 15px/26px Meiryo
+            span
+              color: #B70038
+
+          p:last-child
+            width: 100%
+            input
+              padding: 10px
+              width: 100%
+              background: $white 0% 0% no-repeat padding-box
+              border: 2px solid #A4A4A4
+              border-radius: 10px
+              padding: 10px
+              +mediaqueryTablet 
+                width: 90%
+
+          &:nth-child(5)
+            p:last-child
+              input
+                margin-bottom: 20px
+                
+          .error
+            color: red
+            font-size: 12px
+
+        .checkButton
+          width: fit-content
+          display: block
+          margin: 0 auto
+          +mediaqueryTablet 
+            width: 200px
+          input
+            margin-top: 30px
+            background: #FF0055 0% 0% no-repeat padding-box
+            border-radius: 28px
+            justify-self: center
+            align-items: center
+            border: 1px solid #FF0055 
+            padding: 10px 40px
+            letter-spacing: 0px
+            color: $white
+            font-size: 
+            cursor: pointer
+            font: normal normal bold 20px/36px Meiryo
+            width: 100%
+            +mediaqueryTablet 
+              padding: 5px 40px
+              font: normal normal bold 14px/26px Meiryo
+              width: 100%
+              appearance: none
+              -webkit-appearance: none
+          
+
+        .selectservices
+          p:last-child
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            +mediaqueryTablet 
+              flex-direction: column   
+            span
+              margin-bottom: 10px
+              margin-left: 0
+              label
+                display: flex
+                width: 200px
+                input
+                  width: 20px
+                  height: 20px
+                  padding: 10px
+                  margin-right: 5px
+            
+
+.personalinfometion
+  padding-top: 50px
+  padding-bottom: 300px
+  width: 100%
+  max-width: 800px
+  margin: 0 auto
+  max-width: 860px
+  margin-top: 100px
+  +mediaqueryTablet  
+    padding-top: 0
+    margin-top: 0
+
+  .sectionTitle
+    p
+      color: #5E5E5E
+      font: normal normal bold 45px/68px Meiryo
+      +mediaqueryTablet    
+        // width: 90%
+        margin: 0 auto 50px
+        font: normal normal bold 25px/38px Meiryo
+
+  .sectionSubTitle
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    +mediaqueryTablet  
+      width: 90%
+      margin: 0 auto 50px
+    p
+      color: #5E5E5E
+      font: normal normal bold 24px/36px Meiryo
+      letter-spacing: 1.2px
+      +mediaqueryTablet    
+        font: normal normal bold 17px/36px Meiryo
+
+  .administrator
+    margin-top: 50px
+    +mediaqueryTablet    
+      margin-bottom: 50px
+    p
+      text-align: center
+      color: #5E5E5E
+      font: normal normal bold 20px/36px Meiryo
+      letter-spacing: 1.2px
+      +mediaqueryTablet    
+        font: normal normal bold 15px/36px Meiryo
+      a
+        color: #A13D41
+
+  .personalinfometionTextWrap
+    margin-top: 50px
+    +mediaqueryTablet    
+      width: 90%
+      margin: 0 auto
+    .personalinfometionTitle
+      margin-bottom: 20px
+      p
+        font: normal normal bold 18px/26px Meiryo
+        color: #5E5E5E
+    .personalinfometionText
+      margin-bottom: 50px
+      p
+        font: normal normal bold 13px/26px Meiryo
+        color: #5E5E5E
+
+  .sectionTitle
+    p
+      text-align: center
+      letter-spacing: 0px
+      color: #5E5E5E
+  .sectionSubTitle
+    margin-bottom: 50px
+    p
+      text-align: center
+      letter-spacing: 0px
+      color: #5E5E5E
+      font: normal normal bold 18px/27px Meiryo
+  
+  .contactformwrap
+    margin-bottom: 300px
+
+    form
+      div
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        label
+          display: flex
+          width: 160px
+          letter-spacing: 0px
+          color: #5E5E5E
+        input
+          display: block
+          background: $white 0% 0% no-repeat padding-box
+          border: 2px solid #A4A4A4
+          border-radius: 10px
+          width: 100%
+          padding: 8px
+        textarea
+          display: block
+          width: 100%
+          height: 200px
+          border: 2px solid #A4A4A4
+          border-radius: 10px
+
+      .service
+        label
+          width: 160px
+        select
+          display: block
+          width: 100%
+          background: $white 0% 0% no-repeat padding-box
+          border: 2px solid #A4A4A4
+          border-radius: 10px
+          padding: 8px
+          
+      .name
+        label
+          width: 160px
+        .nameWrap
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: space-between
+          margin-bottom: 0
+          input
+            width: 45%
+
+      .agree
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 100px
+        margin-top: 100px
+        input
+          display: block
+          width: fit-content
+          margin-right: 10px
+        p
+          display: flex
+          a
+            border-bottom: 1px solid #A13D41
+            color: #A13D41
+
+      .submit
+        background: #FF0055 0% 0% no-repeat padding-box
+        border-radius: 28px
+        padding: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 300px
+        margin: 0 auto
+        button
+          text-align: center
+          letter-spacing: 0px
+          color: $white
+          border: none
+
+
+
+
+
+
+
+.page-template-applicationcheck
+  .contactpage
+    .contactWrap
+      #mw_wp_form_mw-wp-form-7
+        form
+          #annotationadvanceSelectOnly
+            display: none
+          div
+            p:first-child
+              font: normal normal bold 13px/26px Meiryo
+
+          #advanceSelectOnly
+            margin-top: 40px
+            margin-bottom: 10px
+            font-size: 12px
+
+          #lineworksdomain
+            margin-top: 20px
+
+          #groups,
+          #lineworksdomain,
+          #email,
+          #ids,
+          #applicationPassword,
+          #pass
+            margin-bottom: 40px
+
